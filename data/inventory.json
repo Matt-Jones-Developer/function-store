@@ -1,0 +1,30 @@
+[
+  {
+    "id": 0,
+    "category": "jacket",
+    "name": "Fredo Jacket",
+    "description": "A tasty tan colour with a strange fit.",
+    "price": "230"
+  },
+  {
+    "id": 1,
+    "category": "jacket",
+    "name": "Powell Jacket",
+    "description": "A nice looking, suspiciously shiny jacket.",
+    "price": "350"
+  },
+  {
+    "id": 2,
+    "category": "jacket",
+    "name": "Lazar Jacket in Denim",
+    "description": "A decent but expensive classic Denim jacket.",
+    "price": "395"
+  },
+  {
+    "id": 3,
+    "category": "jacket",
+    "name": "Lazar Jacket in Black",
+    "description": "The same Denim Jacket, but in cool black.",
+    "price": "395"
+  }
+]

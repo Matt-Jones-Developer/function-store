@@ -4,9 +4,20 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* --background-start-rgb: 214, 219, 220; */
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 245, 245, 245;
   --purple: #3936E5;
+  --gray: #E3E3E7;
+  --mid-gray: #808080;
+  --dark-gray: #6B6D7A;
+  --off-white: #F1F1F2;
+  --racing-green: #1C291D;
+  --navy-blue: #282B3A;
+  --sage: #BACBCA;
+  --sand: #B6956D;
+  --arrow-color: black;
+  --white-fade: rgba(255, 255, 255, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +25,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --arrow-color: white;
   }
 
   body {
@@ -27,6 +39,24 @@
   }
 }
 
+/* Use CSS variables to set the SVG fill color */
+svg {
+  fill: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px dashed red; */
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
@@ -34,7 +64,28 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-/* custom tailwind colours */
-.text-accent {
+nav {
+  z-index: 99;
+}
+
+.nav-items-list li:hover {
+  transform: scale(1.05);
   color: var(--purple);
+}
+
+input::placeholder {
+  color: var(--dark-gray);
+  font-weight: 300;
+}
+
+.logo {
+  height: auto;
+}
+
+.header {
+  height: 100vh;
+}
+
+.footer .footer-items a {
+  color: var(--white-fade);
 }

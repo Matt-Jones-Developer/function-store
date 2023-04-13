@@ -6,7 +6,7 @@ import { Page } from '@/types/Page';
 export async function getStore(): Promise<Store[]> {
   return createClient(clientConfig).fetch(
     groq`*[_type == 'store']{
-
+      id,
       _id,
       _createdAt,
       name,
@@ -22,7 +22,7 @@ export async function getStoreItems(slug: string): Promise<Store> {
   // groq query
   return createClient(clientConfig).fetch(
     groq`*[_type == 'store' && slug.current == $slug][0] {
-
+      id,
       _id,
       _createdAt,
       name, 
