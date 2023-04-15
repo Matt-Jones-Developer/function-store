@@ -16,21 +16,49 @@
   --navy-blue: #282B3A;
   --sage: #BACBCA;
   --sand: #B6956D;
-  --arrow-color: black;
+  --arrow-color: 0, 0, 0;
+  --arrow-white: 255, 255, 255;
   --white-fade: rgba(255, 255, 255, 0.5);
+  --fuchsia: #ff00ff;
 }
 
+/* media queries */
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --arrow-color: white;
   }
 
   body {
     color-scheme: dark light;
   }
+
+  nav,
+  a,
+  .text,
+  .search,
+  .sub-heading,
+  .border-edge,
+  .arrow,
+  .arrow-white,
+  .heart,
+  .bag {
+    filter: invert(1)
+  }
+
+  .logo {
+    filter: brightness(2)
+  }
+
+  #menu,
+  .mobile-nav-items,
+  .footer-items li a,
+  .products,
+  .map {
+    filter: none;
+  }
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -39,11 +67,25 @@
   }
 }
 
-/* Use CSS variables to set the SVG fill color */
-svg {
-  fill: var(--foreground-color);
-  background-color: var(--background-color);
+@media (max-width: 640px) {
+  .nav-strip {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-left: auto;
+  }
+
+  .search-bar-container {
+    flex-basis: 100%;
+    margin-top: 10px;
+    margin-right: auto;
+  }
+
 }
+
+/* global styles */
 
 * {
   margin: 0;
@@ -58,6 +100,7 @@ html {
 }
 
 body {
+  overflow: hidden;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
       transparent,
@@ -68,18 +111,22 @@ nav {
   z-index: 99;
 }
 
-.nav-items-list li:hover {
-  transform: scale(1.05);
-  color: var(--purple);
-}
-
 input::placeholder {
   color: var(--dark-gray);
   font-weight: 300;
 }
 
-.logo {
-  height: auto;
+Link:hover {
+  color: var(--purple);
+}
+
+.cart,
+.login,
+.arrow,
+.arrow-lg,
+.heart,
+.bag {
+  cursor: pointer;
 }
 
 .header {

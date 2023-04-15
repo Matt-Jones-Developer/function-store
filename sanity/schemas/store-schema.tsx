@@ -1,3 +1,4 @@
+// store schema - main products section
 const store = {
   name: 'store',
   title: 'Store',

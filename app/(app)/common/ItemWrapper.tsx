@@ -1,4 +1,4 @@
-import itemData from '../../data/inventory.json';
+import itemData from '../../../data/inventory.json';
 import ItemCard from './ItemCard';
 
 // interface ItemProps {}

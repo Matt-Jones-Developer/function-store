@@ -1,4 +1,4 @@
-import '../globals.css';
+import 'app/(studio)/studio.css';
 
 export const metadata = {
   title: 'Function Store 2023',

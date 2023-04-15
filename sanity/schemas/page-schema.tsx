@@ -1,3 +1,4 @@
+// single product page schema
 const page = {
   name: 'page',
   title: 'Page',
@@ -5,7 +6,7 @@ const page = {
   fields: [
     {
       name: 'title',
-      title: 'title',
+      title: 'Title',
       type: 'string',
     },
     {
@@ -16,6 +17,19 @@ const page = {
         source: 'title',
         maxLength: 96,
       },
+    },
+    {
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: { hotspot: true },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt',
+          type: 'string',
+        },
+      ],
     },
     {
       name: 'content',
