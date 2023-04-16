@@ -1,7 +1,9 @@
 import { createClient, groq } from 'next-sanity';
 import clientConfig from './config/client-config';
 import { Store } from '@/types/Store';
+import { Product } from '@/types/Product';
 import { Page } from '@/types/Page';
+import { User } from '@/types/User';
 
 export async function getStore(): Promise<Store[]> {
   return createClient(clientConfig).fetch(
@@ -18,7 +20,7 @@ export async function getStore(): Promise<Store[]> {
   );
 }
 
-export async function getStoreItems(slug: string): Promise<Store> {
+export async function getProduct(slug: string): Promise<Product> {
   // groq query
   return createClient(clientConfig).fetch(
     groq`*[_type == 'store' && slug.current == $slug][0] {
@@ -28,7 +30,6 @@ export async function getStoreItems(slug: string): Promise<Store> {
       name, 
       'slug': slug.current,
       'image': image.asset->url,
-      url,
       content
     }`,
     { slug }
@@ -41,7 +42,8 @@ export async function getPages(): Promise<Page[]> {
       _id,
       _createdAt,
       title,
-      'slug': slug.current
+      'slug': slug.current,
+      'image': image.asset,
     }`
   );
 }
@@ -57,5 +59,22 @@ export async function getPage(slug: string): Promise<Page> {
       content
     }`,
     { slug }
+  );
+}
+
+export async function createUser(user: User): Promise<User> {
+  return createClient(clientConfig).create({ ...user, _type: 'user' });
+}
+
+export async function getUserByEmail(email: string): Promise<User> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'user' && email == $email][0] {
+      _id,
+      _createdAt,
+      name,
+      email,
+      password
+    }`,
+    { email }
   );
 }

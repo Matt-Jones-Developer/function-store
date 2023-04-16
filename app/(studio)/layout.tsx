@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Function Store 2023',
   description: 'Built with Next.js, Sanity.io + Tailwind',
 };
-
+// sanity-studio root
 export default function RootLayout({
   children,
 }: {

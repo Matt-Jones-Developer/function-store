@@ -38,6 +38,8 @@
   a,
   .text,
   .search,
+  .email-lbl,
+  .pwd-lbl,
   .sub-heading,
   .border-edge,
   .arrow,
@@ -52,6 +54,7 @@
   }
 
   #menu,
+  .login-signup,
   .mobile-nav-items,
   .footer-items li a,
   .products,
@@ -67,6 +70,18 @@
   }
 }
 
+@media (max-width: 414px) {
+  .hero-text {
+    font-size: 80px;
+  }
+
+  .hero-tagline {
+    font-size: 32px;
+    padding-bottom: 1rem;
+  }
+}
+
+
 @media (max-width: 640px) {
   .nav-strip {
     flex-wrap: wrap;
@@ -81,6 +96,10 @@
     flex-basis: 100%;
     margin-top: 10px;
     margin-right: auto;
+  }
+
+  .login-dropdown {
+    margin-top: 8rem;
   }
 
 }
@@ -120,6 +139,11 @@ Link:hover {
   color: var(--purple);
 }
 
+.header {
+  height: 100vh;
+}
+
+.image-container,
 .cart,
 .login,
 .arrow,
@@ -129,8 +153,27 @@ Link:hover {
   cursor: pointer;
 }
 
-.header {
-  height: 100vh;
+/* product lg image zoom */
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.zoom-able {
+  transition: transform .5s ease;
+}
+
+.zoom-able:hover {
+  transform: scale(1.2);
+}
+
+.item-title {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.product:hover .zoom-able+.item-title {
+  opacity: 0;
 }
 
 .footer .footer-items a {

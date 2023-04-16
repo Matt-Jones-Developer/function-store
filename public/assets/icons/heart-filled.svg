@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="18"
+   height="19"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="heart-filled.svg"
+   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="12.421053"
+     inkscape:cx="-9.0169492"
+     inkscape:cy="9.5"
+     inkscape:window-width="1309"
+     inkscape:window-height="456"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4" />
+  <path
+     fill="#000"
+     fill-rule="evenodd"
+     d="M1.235 1.897C2.088.8 3.37.121 5.033.121c1.724 0 3.01.917 3.967 1.987C9.957 1.038 11.243.12 12.967.12c1.664 0 2.945.678 3.798 1.776C17.605 2.98 18 4.431 18 5.957c0 .896-.383 1.857-.93 2.772-.552.926-1.968 2.557-2.779 3.41-.785.827-1.51 1.686-2.707 3.044a523.318 523.318 0 0 0-2.017 2.302l-.174.2L9 17.341l-.38.357-.695-.743a2875.32 2875.32 0 0 0-1.648-1.761c-1.27-1.358-2.074-2.202-2.866-3.035C1.792 10.456 0 7.827 0 5.956 0 4.431.395 2.98 1.235 1.897ZM9 17.342l-.38.357.394.422.379-.436L9 17.342Zm-.014-.777.27-.31c.4-.457.95-1.084 1.548-1.763 1.195-1.356 1.932-2.23 2.733-3.073.776-.817 2.139-2.386 2.64-3.226.507-.85.782-1.616.782-2.237 0-1.359-.354-2.565-1.016-3.418-.65-.837-1.625-1.373-2.976-1.373-1.508 0-2.643.911-3.558 2.077L9 3.765l-.41-.523c-.914-1.166-2.049-2.077-3.557-2.077-1.351 0-2.326.536-2.976 1.373-.662.854-1.016 2.06-1.016 3.418 0 1.469 1.57 3.848 3.124 5.484.795.837 1.601 1.684 2.872 3.04l1.648 1.762.301.322Z"
+     clip-rule="evenodd"
+     id="path2"
+     style="fill:#ff00ff" />
+</svg>

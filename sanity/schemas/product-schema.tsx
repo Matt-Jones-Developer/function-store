@@ -1,7 +1,7 @@
-// store schema - main store section
-const store = {
-  name: 'store',
-  title: 'Store',
+// store product schema - main products section
+const product = {
+  name: 'product',
+  title: 'Product',
   type: 'document',
   fields: [
     {
@@ -29,11 +29,6 @@ const store = {
       ],
     },
     {
-      name: 'url',
-      title: 'URL',
-      type: 'url',
-    },
-    {
       name: 'content',
       title: 'Content',
       type: 'array',
@@ -42,4 +37,4 @@ const store = {
   ],
 };
 
-export default store;
+export default product;

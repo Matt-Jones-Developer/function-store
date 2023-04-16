@@ -9,8 +9,6 @@ const config = defineConfig({
   apiVersion: '2023-04-12',
   basePath: '/admin',
   plugins: [deskTool()],
-  // refactor schemas
-  // REMOVE []!
   schema: { types: schemas },
 });
 
