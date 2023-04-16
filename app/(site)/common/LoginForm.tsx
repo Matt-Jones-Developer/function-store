@@ -74,7 +74,7 @@ function Login({ onClose }: LoginProps) {
 
   return (
     <form
-      className='flex gap-4 flex-col lg:flex-row items-center'
+      className='signup flex gap-4 flex-col lg:flex-row items-center'
       onSubmit={handleSubmit}
     >
       <label htmlFor='email' className='email-lbl text-gray-800'>
@@ -85,7 +85,7 @@ function Login({ onClose }: LoginProps) {
         type='email'
         value={email}
         onChange={(event) => setEmail(event.target.value)}
-        className='px-4 py-2 border border-gray-300 
+        className='email-input px-4 py-2 border border-gray-300 
         focus:outline-none focus:ring focus:ring-indigo-600 w-96 lg:w-56'
       />
 
@@ -97,7 +97,7 @@ function Login({ onClose }: LoginProps) {
         type='password'
         value={password}
         onChange={(event) => setPassword(event.target.value)}
-        className='px-4 py-2 border border-gray-300
+        className='pwd-input px-4 py-2 border border-gray-300
         focus:outline-none focus:ring focus:ring-indigo-600 w-96 lg:w-56'
       />
       <button

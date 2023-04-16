@@ -2,7 +2,7 @@ import Header from './components/Header';
 import StoreFront from './components/StoreFront';
 import FeaturedProducts from './components/FeaturedProducts';
 import GiftSectionCTA from './components/GiftSectionCTA';
-import Footer from './common/Footer';
+import Footer from './components/Footer';
 // import '../lib/alpinejs';
 
 // components imported to SPA

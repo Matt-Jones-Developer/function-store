@@ -38,7 +38,7 @@ export default function StoreFront() {
             <Link
               key={product._id}
               href={`/products/${product.slug}`}
-              className='products hover:scale-105 transition z-50'
+              className='products hover:scale-105 transition'
               style={{ display: 'block' }}
             >
               {product.image && (
@@ -47,7 +47,7 @@ export default function StoreFront() {
                   alt={product.name}
                   width={750}
                   height={300}
-                  className='border border-gray-500 mb-4 z-50'
+                  className='border border-gray-500 mb-4'
                 />
               )}
             </Link>

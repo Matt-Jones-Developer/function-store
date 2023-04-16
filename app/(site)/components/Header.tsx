@@ -83,13 +83,13 @@ const Header = ({ isFullScreen }: Props) => {
         ${isFullScreenFinal ? 'full-screen' : ''}`}
       >
         {/* header content */}
-        <div className='header p-4 md:p-8 py-16 mt-8 text-center relative text-white'>
+        <div className='header p-4 md:p-8 py-0 md:py-16 mt-8 text-center relative text-white'>
           {/* hero text CTA - A UX/UI decision that I wanted to include */}
           <div
             className={
               isFullScreen
-                ? 'mx-auto py-32 mt-8 md:mt-24 z-10'
-                : 'mx-auto py-64 mt-32 lg:mt-16 xl:py-72'
+                ? 'header-wrapper mx-auto py-32 mt-8 md:mt-24 z-10'
+                : 'header-wrapper mx-auto py-64 mt-32 lg:mt-16 xl:py-72'
             }
           >
             <h1 className='hero-text text-8xl font-bold py-10 pb-6 mix-blend-screen'>
@@ -124,7 +124,7 @@ const Header = ({ isFullScreen }: Props) => {
             </div>
             {/* winter collection CTA */}
             <div
-              className='cta flex justify-between z-20 absolute bottom-0 left-8 right-8 md:bottom-4 lg:bottom-16
+              className='winter-cta flex justify-between z-20 absolute bottom-0 left-8 right-8 md:bottom-4 lg:bottom-16
               bg-gray-800 p-4 mt-8 lg:mt-0 mb-8 md:p-6 mx-auto md:mr-auto max-w-lg 
               sm:justify-center sm:text-center sm:m-4 sm:left-4 sm:right-4 lg:left-0 lg:right-0"'
             >

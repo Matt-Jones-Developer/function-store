@@ -112,18 +112,18 @@ const NavBar = () => {
                 height={30}
                 alt='menu toggle icon'
                 src='/assets/icons/menu-icon.svg'
-                className='hover:scale-125 transition'
+                className='mobile-menu-toggle hover:scale-125 transition'
                 style={{ position: 'relative', width: '30px', height: '30px' }}
               />
               <div>
-                <p className='font-light ml-4'>Menu</p>
+                <p className='menu-label font-light ml-4'>Menu</p>
               </div>
             </button>
           </div>
           {/* end hidden */}
 
           {/* branding logo */}
-          <div className='animate-slideInLeft'>
+          <div className='logo-container animate-slideInLeft'>
             <Link href='/' onClick={handleScroll}>
               <Image
                 // styles here catch next 13's quirk with Image height errors
@@ -133,7 +133,7 @@ const NavBar = () => {
                 width={160}
                 height={37}
                 priority={true}
-                className='logo -ml-2 md:ml-2 lg:ml-0'
+                className='logo md:ml-2 lg:ml-0'
               />
             </Link>
           </div>
@@ -183,7 +183,7 @@ const NavBar = () => {
                 height={20}
                 alt='search bar icon'
                 src='/assets/icons/search.svg'
-                className=' search absolute top-0 left-0 w-4 m-4 bg-gray-100 z-20'
+                className='search-icon absolute top-0 left-0 w-4 m-4 z-20'
               />
               <input
                 type='text'
@@ -203,7 +203,7 @@ const NavBar = () => {
         <>
           {/* slide down menu */}
           <div
-            className={`fixed top-0 left-0 w-full h-full bg-gray-400 opacity-90 z-40 
+            className={`fixed top-0 left-0 w-full h-full bg-gray-400 opacity-90 z-50 
       ${animate ? 'animate-slideDown' : 'animate-slideUp'}`}
             onClick={() => {
               handleToggle();
@@ -218,9 +218,7 @@ const NavBar = () => {
           <nav
             id='menu'
             className={`${styles.menu} fixed top-20 w-full h-full 
-      flex flex-col z-40 ${
-        toggle ? 'animate-slideInLeft' : 'animate-slideOutLeft'
-      }
+      flex flex-col ${toggle ? 'animate-slideInLeft' : 'animate-slideOutLeft'}
       ${toggle ? styles.open : ''}`}
             style={{
               transform: toggle ? 'translateX(0%)' : 'translateX(-100%)',
