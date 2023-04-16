@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 export default function Home() {
   return (
     <>
-      <Header isFullScreen={false} />
+      <Header />
       <StoreFront />
       <FeaturedProducts />
       <GiftSectionCTA />

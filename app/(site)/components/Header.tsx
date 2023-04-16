@@ -1,33 +1,9 @@
 'use client';
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import feature from '@/public/assets/png/feature.png';
 
-interface Props {
-  isFullScreen: boolean;
-}
 // header component - fullscreen [TODO]
-const Header = ({ isFullScreen }: Props) => {
-  const [isFullScreenState, setIsFullScreenState] = useState(false);
-
-  useEffect(() => {
-    const handleFullScreen = () => {
-      setIsFullScreenState(
-        window.innerWidth === screen.width &&
-          window.innerHeight === screen.height
-      );
-    };
-
-    window.addEventListener('resize', handleFullScreen);
-
-    return () => {
-      window.removeEventListener('resize', handleFullScreen);
-    };
-  }, []);
-
-  const isFullScreenFinal =
-    isFullScreen !== undefined ? isFullScreen : isFullScreenState;
-
+const Header = () => {
   // handle shop scroll
   const handleShopScroll = () => {
     let topValue;
@@ -78,20 +54,11 @@ const Header = ({ isFullScreen }: Props) => {
 
   return (
     <>
-      <header
-        className={`animate-fadeIn transition-duration-500
-        ${isFullScreenFinal ? 'full-screen' : ''}`}
-      >
+      <header className={`animate-fadeIn transition-duration-500`}>
         {/* header content */}
-        <div className='header p-4 md:p-8 py-0 md:py-16 mt-8 text-center relative text-white'>
+        <div className='header -mt-12 p-4 md:p-8 text-center relative text-white'>
           {/* hero text CTA - A UX/UI decision that I wanted to include */}
-          <div
-            className={
-              isFullScreen
-                ? 'header-wrapper mx-auto py-32 mt-8 md:mt-24 z-10'
-                : 'header-wrapper mx-auto py-64 mt-32 lg:mt-16 xl:py-72'
-            }
-          >
+          <div className='header-container py-48 mt-48 md:py-56 md:mt-56 lg:py-48 lg:mt-48'>
             <h1 className='hero-text text-8xl font-bold py-10 pb-6 mix-blend-screen'>
               Function<span className='text-indigo-600'>.</span>
             </h1>

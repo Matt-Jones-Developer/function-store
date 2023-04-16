@@ -133,6 +133,11 @@
 
 @media (max-width: 414px) {
 
+  .header-container {
+    position: absolute;
+    bottom: 0;
+  }
+
   .hero-text {
     font-size: 80px;
   }
@@ -154,8 +159,8 @@
 }
 
 @media (max-width: 505px) {
-  .header-wrapper {
-    padding-top: 30rem;
+  .header-container {
+    padding-top: 14rem;
   }
 }
 
