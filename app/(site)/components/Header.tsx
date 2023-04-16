@@ -18,7 +18,7 @@ const Header = () => {
       topValue = 960;
     } else {
       // xl screens
-      topValue = 1080;
+      topValue = 1000;
     }
 
     window.scrollTo({
@@ -54,7 +54,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`animate-fadeIn transition-duration-500`}>
+      <header className={`animate-fadeIn transition-duration-500 -mt-8`}>
         {/* header content */}
         <div className='header p-4 md:p-8 text-center relative text-white'>
           {/* hero text CTA - A UX/UI decision that I wanted to include */}
@@ -65,23 +65,23 @@ const Header = () => {
             <h2 className='hero-tagline text-2xl md:text-3xl lg:text-4xl font-bold mix-blend-screen'>
               more than just code, we&apos;re also in-style
             </h2>
-            <p className=' text-xs md:text-md lg:text-xl mix-blend-screen'>
+            {/* <p className=' text-xs md:text-md lg:text-xl mix-blend-screen'>
               <code>
                 you could say we&apos;re &quot;functionally fashionable&quot;
               </code>
-            </p>
+            </p> */}
             {/* button wrapper */}
             <div
-              className='flex justify-center items-center mt-8 md:mt-0 py-18 md:py-8 
+              className='flex justify-center items-center mt-10 mb-0 md:mt-0 py-18 md:py-8 
               hover:scale-105 transition duration-300'
             >
               {/* button border */}
               <div
-                className='flex justify-center items-center border-2 border-white md:w-52 md:h-16 z-99'
+                className='flex justify-center items-center border border-white md:w-52 md:h-16 z-99'
                 onClick={handleShopScroll}
               >
                 <button
-                  className='p-10 py-2 px-8 bg-transparent text-white font-bold 
+                  className='p-10 py-3 px-8 bg-transparent text-white font-light 
                   hover:bg-accent-dark hover:scale-110 transition duration-300'
                   onClick={handleShopScroll}
                 >
@@ -91,32 +91,32 @@ const Header = () => {
             </div>
             {/* winter collection CTA */}
             <div
-              className='winter-cta flex justify-between z-20 absolute bottom-0 left-8 right-8 md:bottom-4 lg:bottom-16
-              bg-gray-800 p-4 mt-8 lg:mt-0 mb-8 md:p-6 mx-auto md:mr-auto max-w-lg 
-              sm:justify-center sm:text-center sm:m-4 sm:left-4 sm:right-4 lg:left-0 lg:right-0"'
+              className='winter-cta bg-slate parent flex z-50 absolute bottom-0 lg:bottom-8
+              left-8 right-8 px-6 py-7 mt-8 lg:mt-0 mb-8 mx-auto md:mr-auto max-w-lg 
+              justify-start text-center sm:m-4 sm:left-4 sm:right-4 lg:left-0 lg:right-0'
             >
-              <div className='cta__text text-left'>
+              <div className='cta-text text-left'>
                 <p className='text-gray-300 text-opacity-50'>What&apos;s New</p>
-                <h2 className=' text-xl md:text-3xl font-extralight tracking-wider w-full'>
+                <h2 className='text-xl md:text-3xl font-extralight tracking-wider'>
                   The Winter Collection
                 </h2>
               </div>
-              <div className='arrow'>
+              <div className='child absolute inset-0 arrow-btn w-20 ml-auto border-l border-whiteFade'>
                 <button
-                  className='p-4 hover:scale-105 transition'
+                  className='cta-btn h-full hover:scale-105 transition'
                   onClick={handleCollectionScroll}
                 >
                   <Image
                     style={{
                       position: 'relative',
-                      width: '36px',
-                      height: '36px',
+                      width: '16px',
+                      height: '16px',
                     }}
                     src='/assets/icons/right-arrow.svg'
                     alt='right arrow icon'
-                    width={36}
-                    height={36}
-                    className='arrow ml-24'
+                    width={16}
+                    height={16}
+                    className='arrow'
                   />
                 </button>
               </div>
@@ -133,8 +133,8 @@ const Header = () => {
             className='absolute top-0 left-0 w-full h-full object-cover -z-10 transform hover:scale-105'
           />
           <div
-            className='absolute inset-0 bg-gradient-to-r 
-            from-transparent to-black/50 transform mix-blend-overlay -z-10'
+            className='absolute inset-0 bg-gradient-to-b 
+              from-transparent to-black/50 transform mix-blend-overlay -z-10'
           ></div>
         </div>
       </header>

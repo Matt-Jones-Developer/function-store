@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import '../../globals.css';
 
 const ShopAll = () => {
   const handleShopAll = () => {
@@ -11,12 +12,12 @@ const ShopAll = () => {
   return (
     <>
       {/* re-usable 'shop-all' component */}
-      <div className=' shop-all flex justify-end'>
-        <div className='border-2 border-gray-300 p-4'>
+      <div className=' shop-all-text flex justify-end'>
+        <div className='shop-all-box border border-whiteFade p-4'>
           <h3>Shop All</h3>
         </div>
         <div
-          className='border-2 border-gray-300 border-l-0 p-4'
+          className='shop-all-box border border-whiteFade border-l-0 p-4'
           onClick={handleShopAll}
         >
           <Image

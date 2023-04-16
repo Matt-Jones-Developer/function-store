@@ -2,6 +2,7 @@
 // import { useRouter } from 'next/router';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect, useCallback } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from 'next/link';
 import Image from 'next/image';
 import NavLinksDesktop from './NavLinksDesktop';
@@ -88,6 +89,10 @@ const NavBar = () => {
     });
   };
 
+  // useMediaQuery package to target specific screen sizes
+  const isTablet = useMediaQuery('(maxWidth: 1020px)');
+  const isMobile = useMediaQuery('(maxWidth: 414px)');
+
   return (
     <>
       <nav
@@ -95,9 +100,9 @@ const NavBar = () => {
         gap-4 py-6 px-4 md:px-8 mt-0 fixed top-0 bg-white z-100'
       >
         {/* navbar top row */}
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-around items-center'>
           {/* hidden mobile nav toggle (md/sm) */}
-          <div className='mobile-nav flex justify-start mr-8 lg:hidden'>
+          <div className='mobile-nav flex justify-start mr-16 lg:mr-8 lg:hidden'>
             <button
               type='button'
               className={`mobile-menu-toggle ${animate ? 'open' : ''}
@@ -123,7 +128,11 @@ const NavBar = () => {
           {/* end hidden */}
 
           {/* branding logo */}
-          <div className='logo-container animate-slideInLeft'>
+          <div
+            className={`logo-container animate-slideInLeft ${
+              isTablet ? 'text-center' : ''
+            }`}
+          >
             <Link href='/' onClick={handleScroll}>
               <Image
                 // styles here catch next 13's quirk with Image height errors

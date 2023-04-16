@@ -5,25 +5,25 @@ const BackButton = () => {
   return (
     <>
       <div className='back flex justify-start mt-4'>
-        <div className='border-2 border-gray-300 border-r-0 p-4'>
+        <div className='border border-whiteFade border-r-0 p-4'>
           <Link href='/'>
             <Image
-              src='/assets/icons/right-arrow-black.svg'
+              src='/assets/icons/right-arrow.svg'
               alt='right arrow icon'
-              width={24}
-              height={24}
-              className='arrow ml-1 hover:scale-105'
+              width={18}
+              height={18}
+              className='arrow mt-1 hover:scale-110 z-50'
               style={{
                 transform: 'scaleX(-1)',
                 fill: 'var(--arrow-color)',
                 position: 'relative',
-                width: '24px',
-                height: '24px',
+                width: '18px',
+                height: '18px',
               }}
             />
           </Link>
         </div>
-        <div className='border-2 border-gray-300 p-4'>
+        <div className='border border-whiteFade p-4'>
           <h3>Back</h3>
         </div>
       </div>

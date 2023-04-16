@@ -8,7 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        sand: 'var(--sand)'
+        sand: 'var(--sand)',
+        slate: 'var(--slate)',
+        green: 'var(--green)',
+        whiteFade: 'var(--whiteFade)',
       },
       borderColor: {
         sand: 'var(--sand)',

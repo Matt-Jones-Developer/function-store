@@ -6,7 +6,7 @@ const Footer = () => {
       {/* footer gray-800 */}
       <footer
         className='footer flex flex-col justify-center items-center mx-auto
-            bg-gray-800 text-white font-light py-20 m-0 gap-16'
+            bg-slate text-white font-light py-20 m-0 gap-16'
       >
         {/* footer top cols */}
         <div
@@ -19,7 +19,7 @@ const Footer = () => {
             <h2 className='text-2xl tracking-wide font-extralight mb-6'>
               Company
             </h2>
-            <ul className='footer-items text-opacity-50 mb-8'>
+            <ul className='footer-items text-whiteFade mb-8'>
               <li>
                 <Link href='/'>VIP Lounge Rewards</Link>
               </li>
@@ -51,7 +51,7 @@ const Footer = () => {
             <h2 className='text-2xl tracking-wide font-extralight mb-6'>
               Get Help
             </h2>
-            <ul className='footer-items text-opacity-50 mb-8'>
+            <ul className='footer-items text-whiteFade mb-8'>
               <li>
                 <Link href='/'>Contact Us</Link>
               </li>
@@ -71,7 +71,7 @@ const Footer = () => {
             <h2 className='text-2xl tracking-wide font-extralight mb-6'>
               Account
             </h2>
-            <ul className='footer-items text-opacity-50'>
+            <ul className='footer-items text-whiteFade'>
               <li>
                 <Link href='/'>Login</Link>
               </li>
@@ -85,7 +85,8 @@ const Footer = () => {
           </div>
         </div>
         <div className='relative flex flex-nowrap justify-center w-full mx-auto'>
-          <div className='absolute flex footer__bottom gap-4 items-center bottom-0'>
+          <div className='border-t border-gray-600 w-2/3 md:w-1/2 lg:w-2/3 h-2 mb-24'></div>
+          <div className='absolute flex footer__bottom gap-4 items-center mb-24 top-8'>
             <p>&copy; Function 2023</p>
             <Link className='map' href='/'>
               Sitemap

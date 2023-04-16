@@ -22,12 +22,12 @@ export default async function Product({ params }: Props) {
           {product.name}
         </h1>
         {/* product image (full screen with zoom effect) */}
-        <div className='image-container m-4 flex flex-col'>
+        <div className='product-image image-container m-4 flex flex-col'>
           <Image
             src={product.image}
             alt={product.name}
-            width={800}
-            height={600}
+            width={500}
+            height={400}
             className='flex justify-center max-w-3xl mt-10 border border-gray-700 zoom-able object-cover'
           />
           <div className='max-w-lg md:max-w-3xl lg:max-w-5xl m-4 mt-8 md:mt-4 text-xl'>
