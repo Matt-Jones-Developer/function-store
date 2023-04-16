@@ -56,7 +56,7 @@ const Header = () => {
     <>
       <header className={`animate-fadeIn transition-duration-500`}>
         {/* header content */}
-        <div className='header -mt-12 p-4 md:p-8 text-center relative text-white'>
+        <div className='header p-4 md:p-8 text-center relative text-white'>
           {/* hero text CTA - A UX/UI decision that I wanted to include */}
           <div className='header-container py-48 mt-48 md:py-56 md:mt-56 lg:py-48 lg:mt-48'>
             <h1 className='hero-text text-8xl font-bold py-10 pb-6 mix-blend-screen'>
