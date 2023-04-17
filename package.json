@@ -31,11 +31,13 @@
     "react-slick": "^0.29.0",
     "sanity": "^3.8.3",
     "sharp": "^0.32.0",
+    "slick-carousel": "^1.8.1",
     "tailwind-styled-components": "^2.2.0",
     "typescript": "5.0.4"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
+    "@types/react-slick": "^0.23.10",
     "autoprefixer": "^10.4.14",
     "file-loader": "^6.2.0",
     "postcss": "^8.4.21",

@@ -13,7 +13,6 @@ import styles from './styles/NavBar.module.css';
 
 const NavBar = () => {
   // set link paths
-  // set link paths
   const pathname = usePathname();
   // toggle state
   const [toggle, setToggle] = useState(false);
@@ -97,12 +96,12 @@ const NavBar = () => {
     <>
       <nav
         className='nav-strip w-full flex flex-nowrap justify-between items-center
-        gap-4 py-6 px-4 md:px-8 mt-0 fixed top-0 bg-white z-100'
+        gap-4 px-6 py-6 md:px-4 lg:px-8 mt-0 fixed top-0 bg-white z-100'
       >
         {/* navbar top row */}
-        <div className='flex justify-around items-center'>
+        <div className='flex justify-between items-center'>
           {/* hidden mobile nav toggle (md/sm) */}
-          <div className='mobile-nav flex justify-start mr-16 lg:mr-8 lg:hidden'>
+          <div className='mobile-nav flex justify-start mr-8 md:mr-16 lg:mr-8 lg:hidden'>
             <button
               type='button'
               className={`mobile-menu-toggle ${animate ? 'open' : ''}
@@ -181,6 +180,9 @@ const NavBar = () => {
             {/* <p className='text-center text-xs'>cart</p> */}
           </div>
         </div>
+
+        {/* hidden hr line */}
+        <div className='border-t border-gray-300 mt-1 w-full h-2 md:w-1/2 lg:w-2/3'></div>
 
         {/* bottom row search bar */}
         <div className='flex flex-nowrap justify-end items-center'>

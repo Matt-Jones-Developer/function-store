@@ -18,7 +18,7 @@
   --sand: #B6956D;
   --arrow-color: 0, 0, 0;
   --arrow-white: 255, 255, 255;
-  --whiteFade: rgba(255, 255, 255, 0.3);
+  --whiteFade: rgba(255, 255, 255, 0.4);
   --blackFade: rgba(0, 0, 0, 0.2);
   --fuchsia: #ff00ff;
 }
@@ -103,7 +103,9 @@ Link:hover {
 }
 
 .footer .footer-items a {
-  color: var(--white-fade);
+  color: var(--whiteFade);
+  line-height: 1.8;
+  font-size: 14px;
 }
 
 /* media queries */
@@ -199,19 +201,35 @@ Link:hover {
   }
 
   .nav-strip {
-    margin: 0;
-    padding-right: 1rem;
+    padding: 1rem 1.4rem;
     flex-wrap: nowrap;
-    width: fit-content;
+    max-width: 100%;
   }
 
   .logo {
-    position: absolute;
-    left: 2rem;
+    /* position: absolute; */
+    margin-right: 0;
+    padding-left: 2rem;
   }
 
   .search {
+    margin: 0;
+    margin-top: -1rem;
+    position: relative;
+  }
+
+  .search input {
     width: 100%;
+    margin: 0px 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    transform: translateY(-50%);
   }
 
   .menu-label {
@@ -219,11 +237,59 @@ Link:hover {
   }
 }
 
+/* pesky iPhone 12 Pro */
+@media (max-width: 390px) and (max-height: 844px) {
+
+  .nav-strip {
+    padding: 1rem 0;
+    flex-wrap: nowrap;
+    max-width: 100%;
+  }
+
+  .mobile-menu-toggle {
+    margin: 0;
+  }
+
+  .menu-label {
+    display: none;
+  }
+
+  .logo {
+    /* position: absolute; */
+    margin-right: 0;
+    padding-left: 1rem;
+  }
+
+  .search {
+    margin: 0;
+    margin-top: -1rem;
+    position: relative;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: -5%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
 @media (max-width: 414px) {
+
+  .nav-strip {
+    padding: 1rem 1rem;
+    flex-wrap: nowrap;
+    max-width: 100%;
+  }
 
   .header-container {
     position: absolute;
+    left: 0;
     bottom: 0;
+  }
+
+  .cta-now {
+    margin: .5rem auto;
   }
 
   .hero-text {

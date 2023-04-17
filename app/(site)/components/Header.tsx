@@ -54,7 +54,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`animate-fadeIn transition-duration-500 -mt-8`}>
+      <header className={`animate-fadeIn transition-duration-500`}>
         {/* header content */}
         <div className='header p-4 md:p-8 text-center relative text-white'>
           {/* hero text CTA - A UX/UI decision that I wanted to include */}
@@ -72,7 +72,7 @@ const Header = () => {
             </p> */}
             {/* button wrapper */}
             <div
-              className='flex justify-center items-center mt-10 mb-0 md:mt-0 py-18 md:py-8 
+              className='cta-now flex justify-center items-center mt-10 mb-0 md:mt-0 py-18 md:py-8 
               hover:scale-105 transition duration-300'
             >
               {/* button border */}
@@ -91,8 +91,8 @@ const Header = () => {
             </div>
             {/* winter collection CTA */}
             <div
-              className='winter-cta bg-slate parent flex z-50 absolute bottom-0 lg:bottom-8
-              left-8 right-8 px-6 py-7 mt-8 lg:mt-0 mb-8 mx-auto md:mr-auto max-w-lg 
+              className='winter-cta bg-slate parent flex z-50 absolute bottom-0 md:bottom-20 lg:bottom-8
+              left-7 right-7 px-6 py-7 mt-8 lg:mt-0 mb-8 mx-auto md:mr-auto max-w-lg 
               justify-start text-center sm:m-4 sm:left-4 sm:right-4 lg:left-0 lg:right-0'
             >
               <div className='cta-text text-left'>

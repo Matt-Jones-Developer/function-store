@@ -13,8 +13,8 @@ const ShopAll = () => {
     <>
       {/* re-usable 'shop-all' component */}
       <div className=' shop-all-text flex justify-end'>
-        <div className='shop-all-box border border-whiteFade p-4'>
-          <h3>Shop All</h3>
+        <div className='shop-all-box border border-whiteFade px-5 py-4'>
+          <h3 className='font-light tracking-wide'>Shop All</h3>
         </div>
         <div
           className='shop-all-box border border-whiteFade border-l-0 p-4'
