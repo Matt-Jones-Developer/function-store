@@ -65,6 +65,7 @@
 - [License](#license)
 - [Questions](#questions)
 - [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
 #
 
@@ -72,7 +73,9 @@
 
 ## Project Summary
 
-Welcome to Function-Store. I really wanted to provide something special for this assignment. As a chance to prove my technical skills and my attention to detail. When I began considering my build options, I immediately decided on a sanity.io backend. I wanted clients to have the ability to upload and manage their own content via an admin dashboard similar to Shopify, but without the fees! As a SPA that they would own, and have full control over.
+Welcome to Function-Store. I really wanted to provide something special for this assignment, as a chance to prove my technical skills and my attention to detail.
+
+When I began considering my build options, I immediately decided on a sanity.io backend. I wanted clients to have the ability to upload and manage their own content via an admin dashboard similar to Shopify, but without the fees! As a SPA that they would own, and have full control over.
 
 <!-- image of finished product -->
 <div align="center">
@@ -87,10 +90,12 @@ Welcome to Function-Store. I really wanted to provide something special for this
 - Must follow a Figma design as closely as possible to match the overall site design brief
 - Although not a requirement, to make buttons and links functional would be a plus
 - To push myself to use all the skills and frameworks at my disposal
-- to build an impressive, cleanly coded, maintainable ans scalable project build
+- Build an impressive, cleanly coded, maintainable ans scalable project build
 - adhere to semantic HTML guidelines, CSS validation tools and Accessibility best practices (WCAG-AA)
 - To use AlpineJS and Tailwind frameworks as preferred by the company
 - Version control using Git
+
+#
 
 ### Motivation
 
@@ -103,11 +108,11 @@ Whilst it's not 100% identical to the mock-up and a few framework issues prevent
 
 The project uses the latest Next.js (version 13) which is still experimental and in Beta phase. However, I felt that pushing myself to go beyond client rendered HTML, CSS and React builds, by adding a login and product back-end which I felt may might help me stand out from the competition.
 
-I discovered multiple bugs and quirks that would of usually been avoided by using vanilla HTML and CSS, especially image manipulation and handling.
+I discovered multiple bugs and quirks that would have usually been avoided by using vanilla HTML and CSS, especially image manipulation and handling.
 
-Moving from React to Next 13 was a complex and often frustrating process, but I am pleased I overcame the issues and built a functional, responsive site that looks great.
+Moving from React to Next 13 was a complex and often challenging process, but I am pleased I overcame the issues and built a functional, responsive site that looks great.
 
-If I could build it again I would use vanilla HTML, CSS, AlpineJS and Tailwind as I could of easily matched up to the Figma design a little better and all the frustrating limitations and bugs currently within Next 13 which created many issues for me would be non-existent.
+If I could build it again I would use vanilla HTML, CSS, AlpineJS and Tailwind as I could of easily matched up to the Figma design a little better and all the limitations and bugs currently within Next 13 which created many issues for me would be non-existent.
 
 I really wanted to use AlpineJS but Next did not play nicely with it, but I would happily use it for future builds. I probably made the project more complicated than it needed to be, but I am all about stepping up and meeting new challenges that push me out of comfort zone, learning new, cutting-edge frameworks quickly and crushing all important deadlines!
 
@@ -130,16 +135,40 @@ I added a hero title, tagline and 'shop now' CTA section, which I felt the site 
   <img src="./public/assets/compressed/app_screenshot_2.jpg" width="800" height="480" />
 </div>
 
+#
+
 ## Built With
 
 - Next.js
 - Sanity.io
-- Tailwind
 - TypeScript
+- JavaScript
+- HTML5
+- CSS3
+- Tailwind
 - GROQ query
-- Love
+- npm package manager
+- Vercel
+- ❤️
 
-Next.js - A server-side rendered, react-based framework front-end, latest version 13 which is currently in Beta.
+<!-- language and framework logos -->
+
+<div align="center">
+  <img src="./public/assets/logos/react.png" width="64" height="64" />
+  <img src="./public/assets/logos/next.png" width="64" height="64" />
+  <img src="./public/assets/logos/sanity.png" width="64" height="64" />
+  <img src="./public/assets/logos/ts.png" width="64" height="64" />
+  <img src="./public/assets/logos/js.png" width="64" height="64" />
+  <img src="./public/assets/logos/html5.png" width="64" height="64" />
+  <img src="./public/assets/logos/css3.png" width="64" height="64" />
+  <img src="./public/assets/logos/tailwind.png" width="64" height="64" />
+  <img src="./public/assets/logos/npm.png" width="64" height="64" />
+  <img src="./public/assets/logos/vercel.png" width="64" height="64" />
+</div>
+
+#
+
+Next.js - A server-side rendered, React-based framework front-end, latest version 13 which is currently in Beta.
 
 Sanity is a fully customizable, headless content management system that allows developers and content creators to collaborate and manage structured content in real-time - very enjoyable to use and was fun to learn.
 
@@ -152,6 +181,8 @@ I also utilised a lot of amazing npm packages, including fontawesome, materialUI
 The application was deployed using Vercel which integrates with Next and Sanity seamlessly.
 
 I compress all my image files using SQOOSH!
+
+#
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -224,7 +255,9 @@ I found it essential to git add, commit and push before building which seemed to
 
 ## Usage
 
-Navigate the site using the navbar or footer areas. If on mobile you can use the hamburger icon for medium and small screen sizes and select an item from the slide out menu. You can browse Storefront items, on mobile devices I built a swiping carousel using Slider to swipe through the products in the category. If you tap on a product it will take you to the products page. You can 'like' items but I have not implemented a save to cart yet.
+Main App Features:
+
+Navigate the site using the navbar or footer areas. If on mobile you can use the hamburger icon for medium and small screen sizes and select an item from the slide out menu. You can browse Storefront items, on mobile devices I built a swiping carousel using Slider to swipe through the products in the category. If you tap on a product it will take you to the products page. You can 'like' items but I have not implemented a save to cart yet. The SPA has two CTA buttons in the header which will take the user to various points on the page. The gift CTA would take the user to a page of suggested gift items.
 
 - AUTO Light/Dark Mode - based on user's OS settings! Instantly switch between light and dark via settings.
 - A Store back-end you can access via /admin (a permission will need to be added to access it)
@@ -233,6 +266,18 @@ Navigate the site using the navbar or footer areas. If on mobile you can use the
 - Functional links to 'demo product' pages - will be building these shortly
 - A login Dropdown menu - choose between Login/Sign-Up
 
+#
+
+Pending TODO's:
+
+[TODO] - Rebuild the NavBar so that it centres everything properly (Next 13 does not allow img src tags)
+
+[TODO] - Await Next.js updates that fix the 'force image resizing' and console warning 'height:auto' which is not available within Next 13 currently
+
+[TODO] - Integrate AlpineJS and my preferred JS framework to enhance my HTML with declarative data binding, event handling, and other interactivity
+
+[TODO] - Fix the iOS issue with filter (even after adding --webkit-filter the logo still inverts)
+
 [TODO] - I want to reduce the size of the Winter Collection CTA on medium sized devices
 
 [TODO] - link the Cart.tsx to the cart page schema - allow for adding and editing of the cart - localStorage saving etc
@@ -240,8 +285,6 @@ Navigate the site using the navbar or footer areas. If on mobile you can use the
 [TODO] - an auto slideOut feature (that I started to implement) which would automatically close the opened nav menu if the user resizes the browser beyond the toggle switch.
 
 [TODO] - complete nav site links that can access both sanity pages schema and custom components (like Cart.tsx)
-
-The SPA has two CTA buttons in the header which will take the user to various points on the page. The gift CTA would take the user to a page of suggested gift items.
 
 Screenshots of the apps output with
 fully responsive design:
@@ -312,6 +355,8 @@ This app was created using Git version control, please check out all the build i
 
 Massive thank you to the Function team for giving me this opportunity. I hope you enjoy checking out the build and would love to hear your feedback.
 
+![function-logo]
+
 #
 
 ## This SPA Was Built In Next.js v13
@@ -346,10 +391,24 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 [linkedin-url]: https://www.linkedin.com/in/matt-jones-zx81
 [love-shield]: https://img.shields.io/badge/BUILT%20WITH-%F0%9F%92%9A-yellowgreen
 [love-url]: https://www.linkedin.com/in/matt-jones-zx81
-[product-screenshot]: ./src/assets/screenshots/app_screenshot.png
-[product-screenshot-2]: ./src/assets/screenshots/app_screenshot_2.png
-[product-screenshot-3]: ./src/assets/screenshots/app_screenshot_3.png
-[tablet-screenshot1]: ./src/assets/screenshots/tablet_screenshot_1.png
-[tablet-screenshot2]: ./src/assets/screenshots/tablet_screenshot_2.png
-[mobile-screenshot1]: ./src/assets/screenshots/mobile_screenshot_1.png
-[mobile-screenshot2]: ./src/assets/screenshots/mobile_screenshot_2.png
+[product-screenshot]: ./public/assets/screenshots/app_screenshot.png
+[product-screenshot-2]: ./public/assets/screenshots/app_screenshot_2.png
+[product-screenshot-3]: ./public/assets/screenshots/app_screenshot_3.png
+[tablet-screenshot1]: ./public/assets/screenshots/tablet_screenshot_1.png
+[tablet-screenshot2]: ./public/assets/screenshots/tablet_screenshot_2.png
+[mobile-screenshot1]: ./public/assets/screenshots/mobile_screenshot_1.png
+[mobile-screenshot2]: ./public/assets/screenshots/mobile_screenshot_2.png
+[react.js-logo]: ./public/assets/logos/react.png
+[next.js-logo]: ./public/assets/logos/next.png
+[sanity.io-logo]: ./public/assets/logos/sanity.png
+[typescript-logo]: ./public/assets/logos/ts.png
+[tailwind-logo]: ./public/assets/logos/tailwind.png
+[npm-logo]: ./public/assets/logos/npm.png
+[vercel-logo]: ./public/assets/logos/vercel.png
+[function-logo]: ./public/assets/logos/function-logo.svg
+[javascript-url]: https://www.javascript.com
+[html5-url]: https://html5.org/
+[css-url]: https://www.w3.org/Style/CSS/Overview.en.html
+[js-logo]: ./public/assets/logos/js.png
+[html5-logo]: ./public/assets/logos/html5.png
+[css-logo]: ./public/assets/logos/css3.png
