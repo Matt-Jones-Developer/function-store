@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
-import feature from '@/public/assets/png/feature.png';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import feature from '@/public/assets/jpg/feature.jpg';
 
 // header component - fullscreen [TODO]
 const Header = () => {
@@ -59,7 +58,7 @@ const Header = () => {
         {/* header content */}
         <div className='header p-4 md:p-8 text-center relative text-white'>
           {/* hero text CTA - A UX/UI decision that I wanted to include */}
-          <div className='header-container py-48 mt-48'>
+          <div className='header-container py-48 mt-48 lg:py-56'>
             <h1 className='hero-text text-8xl font-bold py-10 pb-6 mix-blend-screen'>
               Function<span className='text-indigo-600'>.</span>
             </h1>
@@ -68,7 +67,7 @@ const Header = () => {
             </h2>
             {/* <p className=' text-xs md:text-md lg:text-xl mix-blend-screen'>
               <code>
-                you could say we&apos;re &quot;functionally fashionable&quot;
+                you could say we&apos;re &quot;functionally fashionable!&quot;
               </code>
             </p> */}
             {/* button wrapper */}
@@ -89,9 +88,9 @@ const Header = () => {
             </div>
             {/* winter collection CTA */}
             <div
-              className='winter-cta bg-slate parent flex z-50 absolute bottom-8 md:bottom-10
-              left-7 right-7 px-6 py-7 mt-8 lg:mt-0 mb-8 mx-auto md:mr-auto max-w-lg 
-              justify-start text-center sm:m-4 sm:left-4 sm:right-4 lg:left-0 lg:right-0'
+              className='winter-cta bg-slate parent flex z-50 absolute bottom-4 md:bottom-8
+              left-7 right-7 px-6 py-7 mt-8 mb-8 mx-auto md:mr-auto max-w-lg 
+              justify-start text-center sm:m-4 sm:left-4 sm:right-4'
             >
               <div className='cta-text text-left'>
                 <p className='text-gray-300 text-opacity-50'>What&apos;s New</p>

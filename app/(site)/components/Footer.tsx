@@ -3,7 +3,6 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <>
-      {/* footer gray-800 */}
       <footer
         className='footer flex flex-col justify-center items-center mx-auto
             bg-slate text-white font-light py-8 gap-16 pb-16'

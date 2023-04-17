@@ -194,7 +194,6 @@ Link:hover {
   }
 
   .logo {
-    /* position: absolute; */
     margin-right: 0;
     padding-left: 2rem;
   }
@@ -242,7 +241,6 @@ Link:hover {
   }
 
   .logo {
-    /* position: absolute; */
     margin-right: 0;
     padding-left: 1rem;
   }
@@ -362,27 +360,8 @@ Link:hover {
 
 @media (max-width: 834px) {
 
-  /* .header-wrapper {
-    padding-top: 20rem;
-  }
-
-  .hero-text {
-    padding-top: -24rem;
-  } */
-
   .menu-label {
     display: none;
   }
 
-}
-
-@media (min-width: 1024px) {
-
-  /* .header-wrapper {
-    padding-top: 40rem;
-    margin-top: 0;
-  } */
-  .hide-line {
-    display: none;
-  }
 }

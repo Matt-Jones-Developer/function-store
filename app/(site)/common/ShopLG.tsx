@@ -1,6 +1,6 @@
 import Image from 'next/image';
 {
-  /* re-usable 'shop-all large' component for featured products */
+  /* re-usable 'shop-all large' component for featured products section */
 }
 const ShopLG = () => {
   return (

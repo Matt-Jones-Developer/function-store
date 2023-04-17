@@ -4,7 +4,7 @@ import '../../globals.css';
 const ShopAll = () => {
   const handleShopAll = () => {
     window.scrollTo({
-      top: 1400,
+      top: 1600,
       left: 0,
       behavior: 'smooth',
     });

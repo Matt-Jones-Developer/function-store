@@ -1,5 +1,4 @@
 'use client';
-// import { useRouter } from 'next/router';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect, useCallback } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -10,8 +9,8 @@ import NavLinksMobile from './NavLinksMobile';
 import LoginPage from './LoginSignup';
 import loginIcon from '@/public/assets/icons/login-icon.png';
 import loginIconOn from '@/public/assets/icons/login-icon_on.png';
-import '../../globals.css';
 import styles from './styles/NavBar.module.css';
+import '../../globals.css';
 
 const NavBar = () => {
   // useMediaQuery -target specific screen sizes
@@ -48,18 +47,6 @@ const NavBar = () => {
     }
   }, [toggle]);
 
-  //  [TODO] close mobile nav drop-down when
-  // screen size is resized larger than `md`
-  // useEffect(() => {
-  //   function handleResize() {
-  //     if (window.innerWidth >= 768 && isNavOpen) {
-  //       handleNavToggle();
-  //     }
-  //   }
-  //   window.addEventListener('resize', handleResize);
-  //   return () => window.removeEventListener('resize', handleResize);
-  // }, [isNavOpen, handleNavToggle]);
-
   // handle openLogin Icon (nav btn)
   const handleLoginToggle = useCallback(() => {
     setIsLoginOpen((prevToggle) => !prevToggle);
@@ -77,47 +64,26 @@ const NavBar = () => {
       setShowLoginPage(false);
     }
   };
-  // login/signup switch + signup/submit
+  // login/sign-up switch + sign-up/submit
   const handleLoginPageClose = () => {
     setShowLoginPage(false);
   };
-
-  //   setShowLoginPage(true);
-  //   window.scrollTo({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: 'smooth',
-  //   });
-  //   if (!isLoginOpen) {
-  //     setTimeout(() => {
-  //       setIsLoginOpen(false);
-  //     }, 500);
-  //   }
-  // }, [isLoginOpen]);
 
   // change its colour if on
   // fill the login icon SVG
   const [isOn, setIsOn] = useState(false);
   const toggleLoginOn = () => {
-    setIsFOn(!isOn);
+    setIsOn(!isOn);
   };
 
   const router = useRouter();
 
   const handleCartClick = async () => {
-    // update cart state here
-
-    // retrieve the current cart information from state.
-    // perform updates to the cart information based on user actions.
-    // update the cart information in state and persistent data source/local storage.
-    // trigger any necessary UI updates to reflect the changes in the cart information.
-    // await updateCart();
-
     // navigate to cart page
     router.push('/cart');
   };
 
-  // scroll to top on logo click?
+  // scroll to top on logo click
   const handleScroll = () => {
     window.scrollTo({
       top: 0,
@@ -219,7 +185,6 @@ const NavBar = () => {
               className={`ml-4 hover:scale-125 transition sm:w-8 sm:h-8
               login ${isOn ? 'fill-lime-500' : ''}`}
             />
-            {/* <p className='text-center text-xs'>cart</p> */}
           </div>
         </div>
 

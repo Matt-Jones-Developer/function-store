@@ -1,4 +1,5 @@
 // Mobile Nav uses object data (menuItems) and mapped via JS
+// just to show some variety to my methods
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';

@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import Link from 'next/link';
-// featured product imports
-import featuredProduct1 from '@/public/assets/png/doorway-1.png';
-import featuredProduct2 from '@/public/assets/png/doorway-2.png';
 import ShopLG from '../common/ShopLG';
+// featured product imports
+import featuredProduct1 from '@/public/assets/jpg/doorway-1.jpg';
+import featuredProduct2 from '@/public/assets/jpg/doorway-2.jpg';
 
 const FeaturedProducts = () => {
   return (
@@ -12,6 +11,7 @@ const FeaturedProducts = () => {
       <div className='mt-16 max-w-full mx-6 md:mx-8 lg:mx-24'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8'>
           <div className='flex flex-col justify-center'>
+            {/* set 2x aspect ratio to originals */}
             <Image
               style={{
                 position: 'relative',

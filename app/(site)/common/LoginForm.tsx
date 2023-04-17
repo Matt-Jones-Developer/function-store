@@ -33,15 +33,15 @@ function Login({ onClose }: LoginProps) {
           result.password.hash
         );
         if (isValidPassword) {
-          // Password matches, log user in
-          // Set some state or redirect to main app page
+          // password matches, log user in [TODO]
+          // set state or redirect to main app page
           console.log('Login success - redirecting');
         } else {
-          // Password does not match, show error message
+          // password does not match, show error message
           console.log('Login error');
         }
       } else {
-        // User does not exist, create a new user
+        // user does not exist, create a new user
         const salt = await bcrypt.genSalt();
         const hashedPassword = await bcrypt.hash(password, salt);
         const mutation = `mutation {
@@ -61,14 +61,13 @@ function Login({ onClose }: LoginProps) {
           },
         };
         await client.fetch(mutation, params);
-        // Log user in
-        // Set some state or redirect to main app page
+        // log user in
+        // set some state or redirect to main app page
         console.log('Login success - redirecting');
       }
-      onClose(); // Close the login modal after login
+      onClose(); // close the login modal after login
     } catch (error) {
       console.error('Login error', error);
-      // Show error message
     }
   };
 

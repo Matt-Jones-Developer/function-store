@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Login from './LoginForm';
 
-// lgoin/signup switch buttons
+// login/sign-up switch buttons
 type LoginPageProps = {
   onClose: () => void;
 };
@@ -31,7 +31,7 @@ function LoginPage({ onClose }: LoginPageProps) {
         <Login onClose={onClose} />
       ) : (
         <form className='flex gap-4'>
-          {/* signup sumbit */}
+          {/* sign-up submit */}
           <button
             type='submit'
             className='signupnow-btn m-4 px-4 py-2 bg-indigo-600 text-white

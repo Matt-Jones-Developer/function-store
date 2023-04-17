@@ -1,6 +1,6 @@
 import { useState } from 'react';
 // a very rough cart page design -
-// due to time constraints and issues with mapped pages I did not manage to link this successfully.
+// due to time constraints and issues with mapped pages I did not manage to link this up
 type CartItem = {
   name: string;
   quantity: number;
