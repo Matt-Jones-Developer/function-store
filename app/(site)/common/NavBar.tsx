@@ -8,23 +8,34 @@ import Image from 'next/image';
 import NavLinksDesktop from './NavLinksDesktop';
 import NavLinksMobile from './NavLinksMobile';
 import LoginPage from './LoginSignup';
+import loginIcon from '@/public/assets/icons/login-icon.png';
+import loginIconOn from '@/public/assets/icons/login-icon_on.png';
 import '../../globals.css';
 import styles from './styles/NavBar.module.css';
 
 const NavBar = () => {
+  // useMediaQuery -target specific screen sizes
+  const isTablet = useMediaQuery('(max-width: 1024px)');
+  const isMobile = useMediaQuery('(max-width: 414px)');
+  // hide nav line
+  const hideLine = useMediaQuery('(min-width: 640px)');
+  // states setup
   // set link paths
   const pathname = usePathname();
-  // toggle state
+  // nav menu toggle state
   const [toggle, setToggle] = useState(false);
   // animate state
   const [animate, setAnimate] = useState(false);
-
   // [TODO] auto show/hide the mobile nav area
   const [isNavOpen, setIsNavOpen] = useState(false);
+  // login menu state
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  // handle login page once open
+  const [showLoginPage, setShowLoginPage] = useState(false);
 
-  //  [TODO] close mobile nav drop-down when
-  // screen size is resized larger than `md`
-  const handleToggle = useCallback(() => {
+  // handle the nav menu toggle
+  // animate the icons
+  const handleNavToggle = useCallback(() => {
     setToggle((prevToggle) => !prevToggle);
     setAnimate((prevAnimate) => !prevAnimate);
     if (window.innerWidth >= 768) {
@@ -37,31 +48,58 @@ const NavBar = () => {
     }
   }, [toggle]);
 
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth >= 768 && isNavOpen) {
-        handleToggle();
-      }
-    }
+  //  [TODO] close mobile nav drop-down when
+  // screen size is resized larger than `md`
+  // useEffect(() => {
+  //   function handleResize() {
+  //     if (window.innerWidth >= 768 && isNavOpen) {
+  //       handleNavToggle();
+  //     }
+  //   }
+  //   window.addEventListener('resize', handleResize);
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, [isNavOpen, handleNavToggle]);
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [isNavOpen, handleToggle]);
-
-  // handle login page
-  const [showLoginPage, setShowLoginPage] = useState(false);
-
+  // handle openLogin Icon (nav btn)
+  const handleLoginToggle = useCallback(() => {
+    setIsLoginOpen((prevToggle) => !prevToggle);
+  }, []);
+  // handle login/signup clicks
   const handleLoginClick = () => {
-    setShowLoginPage(true);
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
+    if (!showLoginPage) {
+      setShowLoginPage(true);
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    } else {
+      setShowLoginPage(false);
+    }
   };
-
+  // login/signup switch + signup/submit
   const handleLoginPageClose = () => {
     setShowLoginPage(false);
+  };
+
+  //   setShowLoginPage(true);
+  //   window.scrollTo({
+  //     top: 0,
+  //     left: 0,
+  //     behavior: 'smooth',
+  //   });
+  //   if (!isLoginOpen) {
+  //     setTimeout(() => {
+  //       setIsLoginOpen(false);
+  //     }, 500);
+  //   }
+  // }, [isLoginOpen]);
+
+  // change its colour if on
+  // fill the login icon SVG
+  const [isOn, setIsOn] = useState(false);
+  const toggleLoginOn = () => {
+    setIsFOn(!isOn);
   };
 
   const router = useRouter();
@@ -88,10 +126,6 @@ const NavBar = () => {
     });
   };
 
-  // useMediaQuery package to target specific screen sizes
-  const isTablet = useMediaQuery('(maxWidth: 1020px)');
-  const isMobile = useMediaQuery('(maxWidth: 414px)');
-
   return (
     <>
       <nav
@@ -107,7 +141,7 @@ const NavBar = () => {
               className={`mobile-menu-toggle ${animate ? 'open' : ''}
               -m-2.5 p-2.5 inline-flex items-center`}
               onClick={() => {
-                handleToggle();
+                handleNavToggle();
               }}
             >
               {/* mobile menu hamburger */}
@@ -156,7 +190,7 @@ const NavBar = () => {
         </div>
 
         {/* cart and login items */}
-
+        {/* CART ICON */}
         <div className='flex flex-nowrap justify-end items-center ml-auto'>
           <div className='cart' onClick={handleCartClick}>
             <Image
@@ -168,21 +202,31 @@ const NavBar = () => {
             />
           </div>
 
-          {/* login icon component */}
-          <div className='login' onClick={handleLoginClick}>
+          {/* LOGIN TOGGLE icon component 
+          // awaiting SVG file to get working */}
+          <div
+            className='login'
+            // onClick={() => {
+            //   handleLoginToggle();
+            // }}
+            onClick={handleLoginClick}
+          >
             <Image
               width={24}
               height={24}
               alt='login icon'
-              src='/assets/icons/login-icon.png'
-              className='ml-4 hover:scale-125 transition sm:w-8 sm:h-8'
+              src={isOn ? loginIconOn : loginIcon}
+              className={`ml-4 hover:scale-125 transition sm:w-8 sm:h-8
+              login ${isOn ? 'fill-lime-500' : ''}`}
             />
             {/* <p className='text-center text-xs'>cart</p> */}
           </div>
         </div>
 
-        {/* hidden hr line */}
-        <div className='border-t border-gray-300 mt-1 w-full h-2 md:w-1/2 lg:w-2/3'></div>
+        {/* hidden mobile only hr line */}
+        {hideLine ? null : (
+          <div className='hide-line border-t border-gray-400 mt-1 w-full h-2 md:w-1/2 lg:w-2/3'></div>
+        )}
 
         {/* bottom row search bar */}
         <div className='flex flex-nowrap justify-end items-center'>
@@ -207,20 +251,23 @@ const NavBar = () => {
         </div>
         {/* end desktop navbar */}
       </nav>
+      {/* modals */}
 
       {/* display login/signup modal when requested */}
       {showLoginPage && <LoginPage onClose={handleLoginPageClose} />}
+
+      {/* slide down mobile menu BG and items */}
       {toggle && (
         <>
-          {/* slide down menu */}
+          {/* slide down nav menu */}
           <div
             className={`fixed top-0 left-0 w-full h-full bg-gray-400 opacity-90 z-50 
       ${animate ? 'animate-slideDown' : 'animate-slideUp'}`}
             onClick={() => {
-              handleToggle();
+              handleNavToggle();
               setTimeout(() => {
                 setIsNavOpen(false);
-                setAnimate(false); // add this line to set animate to false when the menu is closed
+                setAnimate(false);
               }, 500);
             }}
           />

@@ -13,7 +13,7 @@ export default async function Product({ params }: Props) {
 
   return (
     <>
-      <div className='product-page wrapper flex justify-start items-center mt-32 md:mt-0 p-4 ml-4'>
+      <div className='product-page wrapper flex justify-start items-center mt-48 md:mt-0 p-4 ml-4'>
         <BackButton />
       </div>
       <div className='product flex flex-col justify-center items-center text-center mt-4 p-4'>

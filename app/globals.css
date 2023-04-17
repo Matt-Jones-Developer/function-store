@@ -4,7 +4,6 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  /* --background-start-rgb: 214, 219, 220; */
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 245, 245, 245;
   --purple: #3936E5;
@@ -24,13 +23,6 @@
 }
 
 /* global styles */
-
-/* testing */
-/* .cta-text,
-.cta-btn,
-.arrow-btn {
-  border: 1px dashed rgba(255, 0, 0, 0.31);
-} */
 
 * {
   margin: 0;
@@ -73,7 +65,6 @@ Link:hover {
 .cart,
 .login,
 .arrow,
-.arrow-lg,
 .heart,
 .bag {
   cursor: pointer;
@@ -130,15 +121,12 @@ Link:hover {
   .sub-heading,
   .border-edge,
   .arrow,
-  .arrow-white,
   .heart,
   .bag {
-    --webkit-filter: invert(1);
     filter: invert(1)
   }
 
   .logo {
-    --webkit-filter: brightness(2);
     filter: brightness(2)
   }
 
@@ -150,7 +138,6 @@ Link:hover {
   .products,
   .heart:active,
   .map {
-    --webkit-filter: none;
     filter: none;
   }
 
@@ -313,8 +300,31 @@ Link:hover {
 }
 
 @media (max-width: 505px) {
+
+  .logo {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .search {
+    margin: 0;
+    margin-top: -1rem;
+    position: relative;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: -5%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
   .header-container {
     padding-top: 14rem;
+  }
+
+  .winter-cta {
+    margin-bottom: 2rem;
   }
 
   .product {
@@ -350,22 +360,29 @@ Link:hover {
 
 }
 
-/* @media (max-width: 834px) {
+@media (max-width: 834px) {
 
-  .header-wrapper {
+  /* .header-wrapper {
     padding-top: 20rem;
   }
 
   .hero-text {
     padding-top: -24rem;
+  } */
+
+  .menu-label {
+    display: none;
   }
 
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
 
-  .header-wrapper {
+  /* .header-wrapper {
     padding-top: 40rem;
     margin-top: 0;
+  } */
+  .hide-line {
+    display: none;
   }
-} */
+}

@@ -13,10 +13,15 @@ const FeaturedProducts = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8'>
           <div className='flex flex-col justify-center'>
             <Image
+              style={{
+                position: 'relative',
+                width: '700px',
+                height: '500px',
+              }}
               src={featuredProduct1}
               alt='doorway-image-casual-brown-jacket'
-              width={850}
-              height={300}
+              width={700}
+              height={500}
               className='object-cover mb-2'
             />
             <div className='flex-grow mt-8'>
@@ -36,10 +41,15 @@ const FeaturedProducts = () => {
           </div>
           <div className='flex flex-col justify-center'>
             <Image
+              style={{
+                position: 'relative',
+                width: '700px',
+                height: '500px',
+              }}
               src={featuredProduct2}
               alt='doorway-image-blue-hoodie-denim-jeans'
-              width={850}
-              height={300}
+              width={700}
+              height={500}
               className='object-cover mb-2'
             />
             <div className='flex-grow mt-8'>

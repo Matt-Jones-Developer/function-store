@@ -24,11 +24,11 @@
 
 <div align="center">
   <h2>Function. Skills Test SPA Storefront Demo</h2>
-  <h3>Built with Next.js, Sanity, Tailwind, AlpineJS, TypeScript & GROQ</h3>
+  <h3>Built with Next.js, Sanity.io, Tailwind, TypeScript & GROQ</h3>
 </div>
 
 <div align="center">
-<p>My latest effort, schemas and full-stack knowledge coming together to showcase my current skill set for the Function team.</p>
+<p>A mockup build to showcase my current skill set for the Function team.</p>
 
 <a href="https://github.com/Matt-Jones-Developer/function-store/"><strong>Explore the docs »</strong></a>
 <br />
@@ -66,7 +66,7 @@
 
 ## Project Summary
 
-Welcome to ...
+Welcome to Function.
 
 <!-- video of finished product -->
 <div align="center">

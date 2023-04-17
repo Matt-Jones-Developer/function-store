@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import feature from '@/public/assets/png/feature.png';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 // header component - fullscreen [TODO]
 const Header = () => {
@@ -9,16 +10,16 @@ const Header = () => {
     let topValue;
     if (window.innerWidth < 640) {
       // sm screens
-      topValue = 900;
+      topValue = 820;
     } else if (window.innerWidth < 1280) {
       // md screens
-      topValue = 940;
+      topValue = 900;
     } else if (window.innerWidth < 1580) {
       // lg screens
-      topValue = 960;
+      topValue = 920;
     } else {
       // xl screens
-      topValue = 1000;
+      topValue = 900;
     }
 
     window.scrollTo({
@@ -34,16 +35,16 @@ const Header = () => {
 
     if (window.innerWidth < 640) {
       // sm screens
-      topValue = 3720;
+      topValue = 1480;
     } else if (window.innerWidth < 1024) {
       // md screens
-      topValue = 2250;
+      topValue = 2200;
     } else if (window.innerWidth < 1280) {
       // lg screens
-      topValue = 1480;
+      topValue = 1240;
     } else {
       // xl screens and above
-      topValue = 1780;
+      topValue = 1580;
     }
     window.scrollTo({
       top: topValue,
@@ -54,15 +55,15 @@ const Header = () => {
 
   return (
     <>
-      <header className={`animate-fadeIn transition-duration-500`}>
+      <header className={`animate-fadeIn transition-duration-500 -mt-12`}>
         {/* header content */}
         <div className='header p-4 md:p-8 text-center relative text-white'>
           {/* hero text CTA - A UX/UI decision that I wanted to include */}
-          <div className='header-container py-48 mt-48 md:py-56 md:mt-56 lg:py-48 lg:mt-48'>
+          <div className='header-container py-48 mt-48'>
             <h1 className='hero-text text-8xl font-bold py-10 pb-6 mix-blend-screen'>
               Function<span className='text-indigo-600'>.</span>
             </h1>
-            <h2 className='hero-tagline text-2xl md:text-3xl lg:text-4xl font-bold mix-blend-screen'>
+            <h2 className='hero-tagline mx-4 text-2xl md:text-3xl lg:text-4xl font-bold mix-blend-screen'>
               more than just code, we&apos;re also in-style
             </h2>
             {/* <p className=' text-xs md:text-md lg:text-xl mix-blend-screen'>
@@ -73,16 +74,13 @@ const Header = () => {
             {/* button wrapper */}
             <div
               className='cta-now flex justify-center items-center mt-10 mb-0 md:mt-0 py-18 md:py-8 
-              hover:scale-105 transition duration-300'
+              transition duration-300'
             >
               {/* button border */}
-              <div
-                className='flex justify-center items-center border border-white md:w-52 md:h-16 z-99'
-                onClick={handleShopScroll}
-              >
+              <div className='now-btn-wrapper flex justify-center items-center border border-white md:w-52 md:h-16'>
                 <button
-                  className='p-10 py-3 px-8 bg-transparent text-white font-light 
-                  hover:bg-accent-dark hover:scale-110 transition duration-300'
+                  className='now-btn p-10 py-3 px-8 bg-transparent text-white font-light 
+                  hover:bg-accent-dark hover:scale-110 transition duration-300 z-50'
                   onClick={handleShopScroll}
                 >
                   SHOP NOW
@@ -91,7 +89,7 @@ const Header = () => {
             </div>
             {/* winter collection CTA */}
             <div
-              className='winter-cta bg-slate parent flex z-50 absolute bottom-0 md:bottom-20 lg:bottom-8
+              className='winter-cta bg-slate parent flex z-50 absolute bottom-8 md:bottom-10
               left-7 right-7 px-6 py-7 mt-8 lg:mt-0 mb-8 mx-auto md:mr-auto max-w-lg 
               justify-start text-center sm:m-4 sm:left-4 sm:right-4 lg:left-0 lg:right-0'
             >
@@ -103,11 +101,12 @@ const Header = () => {
               </div>
               <div className='child absolute inset-0 arrow-btn w-20 ml-auto border-l border-whiteFade'>
                 <button
-                  className='cta-btn h-full hover:scale-105 transition'
+                  className='cta-btn h-full w-full ml-8 hover:scale-105 transition'
                   onClick={handleCollectionScroll}
                 >
                   <Image
                     style={{
+                      fill: 'var(--arrow-white)',
                       position: 'relative',
                       width: '16px',
                       height: '16px',
@@ -116,7 +115,7 @@ const Header = () => {
                     alt='right arrow icon'
                     width={16}
                     height={16}
-                    className='arrow'
+                    className='arrow-white'
                   />
                 </button>
               </div>

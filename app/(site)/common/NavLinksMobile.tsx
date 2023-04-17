@@ -87,7 +87,7 @@ const NavLinksMobile = ({ currentPathname }: { currentPathname: string }) => {
 
   return (
     // current nav mobile menu - mapped via object
-    <div className='nav-items m-4 mt-32 md:mt-8 md:pl-3 text-md flex flex-col'>
+    <div className='nav-items m-4 mt-32 md:mt-8 md:pl-3 text-md flex flex-col gap-8'>
       {mobileMenu.map((menu, index) => (
         <div className='flex items-center' key={index}>
           {menu.icon}
@@ -95,7 +95,7 @@ const NavLinksMobile = ({ currentPathname }: { currentPathname: string }) => {
             key={index}
             onClick={handleToggle}
             className='w-8 mobile-nav-items hover:scale-105
-             hover:text-indigo-600 hover:ml-2'
+             hover:text-indigo-600 hover:ml-1 bg-transparent'
             href={menu.link}
           >
             {menu.name}

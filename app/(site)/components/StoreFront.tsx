@@ -71,8 +71,8 @@ const StoreFront = () => {
                         <Image
                           src={product.image}
                           alt={product.name}
-                          width={750}
-                          height={300}
+                          width={650}
+                          height={250}
                           className='border border-blackFade mb-4'
                         />
                       )}
@@ -114,6 +114,7 @@ const StoreFront = () => {
                         width={750}
                         height={300}
                         className='border border-gray-500 mb-4'
+                        // onClick={pageScroll()}
                       />
                     )}
                   </Link>

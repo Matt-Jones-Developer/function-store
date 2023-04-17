@@ -7,7 +7,7 @@ const ShopLG = () => {
     <>
       <div className='shop-all flex justify-start mt-4'>
         <div className='shop-all-box border border-whiteFade p-4'>
-          <h3 className='tracking-wide text-gray-700'>Shop All</h3>
+          <h3 className='tracking-wide'>Shop All</h3>
         </div>
         <div className='shop-all-box border border-whiteFade border-l-0 p-4'>
           <Image

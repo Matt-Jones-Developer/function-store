@@ -100,10 +100,11 @@ function Login({ onClose }: LoginProps) {
         className='pwd-input px-4 py-2 border border-gray-300
         focus:outline-none focus:ring focus:ring-indigo-600 w-96 lg:w-56'
       />
+      {/* login submit - signup */}
       <button
         type='submit'
         className='px-8 py-2 m-4 bg-indigo-600 text-white
-         hover:scale-105 hover:bg-indigo-800 w-48'
+         hover:scale-125 transition hover:bg-indigo-800 w-48'
         onClick={onClose}
       >
         Submit

@@ -19,21 +19,23 @@ function LoginPage({ onClose }: LoginPageProps) {
 
   return (
     <div
+      // [TODO] hide the search bar when login open
       className='login-dropdown flex justify-center flex-col lg:flex-row flex-wrap
-      items-center p-8 mt-16 pb-0 mb-0 animate-slideDown'
+      items-center p-8 mt-24 md:mt-16 pb-0 animate-slideDown'
     >
+      {/* sign up or Log in */}
       <button type='button' className='text-2xl m-4'>
-        {showLogin ? '' : 'Sign Up Here!'}
+        {showLogin ? '' : ''}
       </button>
       {showLogin ? (
         <Login onClose={onClose} />
       ) : (
         <form className='flex gap-4'>
-          {/* Add input fields for sign up */}
+          {/* signup sumbit */}
           <button
             type='submit'
-            className='m-4 px-4 py-2 bg-indigo-600 text-white
-          hover:bg-gray-600 focus:outline-none focus:bg-indigo-800'
+            className='signupnow-btn m-4 px-4 py-2 bg-indigo-600 text-white
+          hover:scale-125 transition focus:outline focus:bg-indigo-800'
           >
             Sign Up Now
           </button>
@@ -45,14 +47,14 @@ function LoginPage({ onClose }: LoginPageProps) {
         items-center font-light border-2'
       >
         <button
-          className='login-btn hover:text-indigo-600'
+          className='login-switch-btn hover:text-indigo-600 hover:scale-105 transition'
           onClick={handleLoginClick}
         >
           Login
         </button>{' '}
         |{' '}
         <button
-          className='signup-btn hover:text-indigo-600'
+          className='signup-switch-btn hover:text-indigo-600 hover:scale-105 transition'
           onClick={handleSignupClick}
         >
           Sign Up
