@@ -73,9 +73,9 @@
 
 ## Project Summary
 
-Welcome to Function-Store. I really wanted to provide something special for this assignment, as a chance to prove my technical skills and my attention to detail.
+Welcome to Function-Store. I really wanted to provide something special for this assignment, as a chance to prove my technical skills and attention to detail.
 
-When I began considering my build options, I immediately decided on a sanity.io backend. I wanted clients to have the ability to upload and manage their own content via an admin dashboard similar to Shopify, but without the fees! As a SPA that they would own, and have full control over.
+When I began considering build options, I immediately decided on a sanity.io backend. I wanted clients to have the ability to upload and manage their own content via an admin dashboard similar to Shopify, but without the fees! As a SPA that they would own, and have full control over.
 
 <!-- image of finished product -->
 <div align="center">
@@ -86,12 +86,12 @@ When I began considering my build options, I immediately decided on a sanity.io 
 
 ## User Story
 
-- I want to build a functional, full stack e-commerce single page application using the latest frameworks
+- Build a functional, full stack e-commerce single page application using the latest frameworks
 - Must follow a Figma design as closely as possible to match the overall site design brief
 - Although not a requirement, to make buttons and links functional would be a plus
 - To push myself to use all the skills and frameworks at my disposal
-- Build an impressive, cleanly coded, maintainable ans scalable project build
-- adhere to semantic HTML guidelines, CSS validation tools and Accessibility best practices (WCAG-AA)
+- Build an impressive, cleanly coded, maintainable and scalable project 
+- Adhere to semantic HTML guidelines, CSS validation tools and Accessibility best practices (WCAG-AA)
 - To use AlpineJS and Tailwind frameworks as preferred by the company
 - Version control using Git
 
@@ -108,7 +108,7 @@ Whilst it's not 100% identical to the mock-up and a few framework issues prevent
 
 The project uses the latest Next.js (version 13) which is still experimental and in Beta phase. However, I felt that pushing myself to go beyond client rendered HTML, CSS and React builds, by adding a login and product back-end which I felt may might help me stand out from the competition.
 
-I discovered multiple bugs and quirks that would have usually been avoided by using vanilla HTML and CSS, especially image manipulation and handling.
+I discovered multiple bugs and quirks in Next 13 that would have usually been avoided by using vanilla HTML and CSS, especially image manipulation and handling.
 
 Moving from React to Next 13 was a complex and often challenging process, but I am pleased I overcame the issues and built a functional, responsive site that looks great.
 
@@ -125,7 +125,7 @@ The backend makes it easy for clients to view, add, edit and remove items from t
 
 As a developer it is easy to build new client schemas that would create as many structured store sections, folders and product content as required by the end user. Sadly I ran out of time to implement the cart component but will definitely continue development on this to get all the features that I wanted to complete.
 
-Design wise, I tried to match the the site as best I could with the resources I had (next.js bugs included) and the time allocated.
+Design wise, I tried to match the site as best I could with the resources I had (next.js bugs included) and the time allocated.
 
 I added a hero title, tagline and 'shop now' CTA section, which I felt the site needed - However I realise the importance of matching a designer or clients design specifications so please treat it as another way of me trying to stand out and make a bold UX decision, rather than simply ignoring the project design in favour of personal choice. I would always follow the project brief to the line.
 
@@ -276,7 +276,7 @@ Pending TODO's:
 
 [TODO] - Integrate AlpineJS and my preferred JS framework to enhance my HTML with declarative data binding, event handling, and other interactivity
 
-[TODO] - Fix the iOS issue with filter (even after adding --webkit-filter the logo still inverts)
+[TODO] - Fix the iOS issue with filter (even after adding --webkit-filter the logo still inverts so I removed it)
 
 [TODO] - I want to reduce the size of the Winter Collection CTA on medium sized devices
 
